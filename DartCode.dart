@@ -31,11 +31,14 @@ class TechLearnerMentor
           this.time=stdin.readLineSync();
         }
     }
-    void getMentor(var stackname,var time)
+    void getMentor(var stacknamex,var timex)
     {
-      while(stackname)
+      while(stackname==stacknamex)
       {
-        if(this.)
+        if(participant==MENTOR && time<timex)
+        {
+            print($stackname + "Is free for mentoring");
+        }
       }
     }
 }
