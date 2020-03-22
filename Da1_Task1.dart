@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.yellow,
       ),
-      home: MyHomePage(title: 'Tinkerhub Fkutter'),
+      home: MyHomePage(title: 'Tinkerhub Flutter'),
     );
   }
 }
@@ -30,7 +30,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-      _counter--;
+      _counter++;
+    });
+  }
+  
+  void _decrementCounter() {
+    setState(() {
+      _counter++;
     });
   }
 
@@ -52,6 +58,11 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.display1,
             ),
+            new RaisedButton
+              (
+                child: new Text('DECREMENT',),
+                onPressed: _decrementCounter,
+              ),
             
           ],
         ),
